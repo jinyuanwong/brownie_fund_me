@@ -1,0 +1,23 @@
+dependencies:
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+compiler:
+  solc:
+    remappings:
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1'
+
+dotenv: .env
+wallet:
+  "from_key": ${PRIVATE_KEY}
+
+networks:
+  goerli:
+    "price_fee_address": "0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e"
+    "verify": True
+  development:
+    "verify": False
+  ganache-local:
+    "verify": False
+  mainnet-fork-dev:
+    "price_fee_address": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+    "verify": False
+    
